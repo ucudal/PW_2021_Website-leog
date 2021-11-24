@@ -8,7 +8,7 @@ button.addEventListener("click", function(e) {
         'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            email: document.getElementById("email").value,
+            email: document.getElementById("email-address").value,
             password: document.getElementById("password").value
         })
     })
