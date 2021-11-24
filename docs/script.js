@@ -14,7 +14,14 @@ button.addEventListener("click", function(e) {
         credentials: 'include'
     })
     .then(data => {
-        console.log("Data", data);
-        console.log("Cookies", document.cookie)
+        if(data.ok) {
+            // Login correcto
+            document.getElementById("login").classList.add("hidden");
+            document.getElementById("card").classList.remove("hidden");
+        } else {
+            // Login incorrecto
+            button.textContent = "Los datos fueron incorrectos.";
+            button.classList.add("animate-pulse", "bg-red-500")
+        }
     });
 });
