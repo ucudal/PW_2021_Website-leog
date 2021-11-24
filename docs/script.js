@@ -10,7 +10,8 @@ button.addEventListener("click", function(e) {
         body: JSON.stringify({
             email: document.getElementById("email-address").value,
             password: document.getElementById("password").value
-        })
+        }),
+        credentials: 'include'
     })
     .then(data => {
         console.log("Data", data);
