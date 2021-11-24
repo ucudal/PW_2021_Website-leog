@@ -21,7 +21,13 @@ button.addEventListener("click", function(e) {
         } else {
             // Login incorrecto
             button.textContent = "Los datos fueron incorrectos.";
-            button.classList.add("animate-pulse", "bg-red-500")
+            button.classList.remove("bg-blue-600");
+            button.classList.add("animate-pulse", "bg-red-500");
+            setTimeout(function() {
+                button.classList.remove("animate-pulse", "bg-red-500"); 
+                button.classList.add("bg-blue-600");       
+                button.textContent = "Entrar";        
+            }, 5000)
         }
     });
 });
