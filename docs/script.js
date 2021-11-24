@@ -1,5 +1,5 @@
 const button = document.getElementById("boton");
-button.onclick = function(e) {
+button.addEventListener("click", function(e) {
     e.preventDefault();
     fetch("https://PW2021-APINode-leog.leog4.repl.co/enviar-formulario", {
         method: 'POST',
@@ -16,4 +16,4 @@ button.onclick = function(e) {
         console.log("Data", data);
         console.log("Cookies", document.cookie)
     });
-}
+});
